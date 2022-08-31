@@ -53,7 +53,7 @@ function deletar(obj){
 
     if(sureDel){
 
-        url = "http://127.0.0.1:8001/api/delete-produto/"+obj.cod_produto;
+        url = "http://127.0.0.1:8000/api/delete-produto/"+obj.cod_produto;
 
         $.ajax({
             url:url,
@@ -65,7 +65,7 @@ function deletar(obj){
                 return;
             }
 
-            var base = "http://127.0.0.1:8001/api/";
+            var base = "http://127.0.0.1:8000/api/";
 
             var url = base + "listar-produtos"; 
 
@@ -125,7 +125,7 @@ $(function(){
 
     $("#form-produto").hide();
 
-    var base = "http://127.0.0.1:8001/api/";
+    var base = "http://127.0.0.1:8000/api/";
 
     function listarCidades(){
 
@@ -271,10 +271,10 @@ $(function(){
             "marca_produto":parseInt($("#marcas").val())
         }  
 
-        url = "http://127.0.0.1:8001/api/inserir-produto";
+        url = "http://127.0.0.1:8000/api/inserir-produto";
 
         if(isUpdate){
-            url = "http://127.0.0.1:8001/api/update-produto/"+ $("#codigo").val();
+            url = "http://127.0.0.1:8000/api/update-produto/"+ $("#codigo").val();
         }
 
         $.ajax({
@@ -312,7 +312,7 @@ $(function(){
 
     if(produto.length > 0){
 
-        url = "http://127.0.0.1:8001/api/produto/"+ produto;
+        url = "http://127.0.0.1:8000/api/produto/"+ produto;
 
         $.ajax({
             url:url,
